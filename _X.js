@@ -3,7 +3,7 @@
 		return new $.fn(Element)
 
 	}
-	window.$ = window.Zeus = $;
+	window.$ = window._X = $;
 	$.fn = function(Element, conText) {
 		return this.getElement(conText, Element)
 
@@ -33,8 +33,8 @@
 		css : function(oStyle, oValue) {
 
 			if (arguments.length == 1) {
-			
-			
+
+
 
 			} else if (arguments.length == 2) {
 
@@ -59,33 +59,32 @@
 			return this
 		},
 		hover:function(over,out){
-		
+
 			this.each(function() {
 				this.onmouseout = out;
 				this.onmouseover = over;
-			
+
 
 			})
-	
+
 		},
 		mousedown:function(fn){
 			this.each(function(){
 				this.onmousedown=fn;
-			
+
 			})
-		
-		
+
+
 		},
 		mouseup:function(fn){
 			this.each(function(){
-			
+
 			this.onmouseup=fn
 			})
-		
-		
+
+
 		}
-		
+
 	}
 
 })()
-
